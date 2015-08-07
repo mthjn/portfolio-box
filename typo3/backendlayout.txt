@@ -1,0 +1,78 @@
+backend_layout {
+	colCount = 2
+	rowCount = 6
+	rows {
+		1 {
+			columns {
+				1 {
+					name = box1
+					colPos = 21
+				}
+				2 {
+					name = select1
+					colPos = 31
+				}
+			}
+		}
+		2 {
+			columns {
+				1 {
+					name = box2
+					colPos = 22
+				}
+				2 {
+					name = select2
+					colPos = 32
+				}
+			}
+		}
+		3 {
+			columns {
+				1 {
+					name = box3
+					colPos = 23
+				}
+				2 {
+					name = select3
+					colPos = 33
+				}
+			}
+		}
+		4 {
+			columns {
+				1 {
+					name = box4
+					colPos = 24
+				}
+				2 {
+					name = select4
+					colPos = 34
+				}
+			}
+		}
+		5 {
+			columns {
+				1 {
+					name = box5
+					colPos = 25
+				}
+				2 {
+					name = select5
+					colPos = 35
+				}
+			}
+		}
+		6 {
+			columns {
+				1 {
+					name = box6
+					colPos = 26
+				}
+				2 {
+					name = select6
+					colPos = 36
+				}
+			}
+		}
+	}
+}

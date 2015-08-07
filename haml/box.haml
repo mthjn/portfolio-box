@@ -1,0 +1,93 @@
+!!!
+%html
+  %head
+    %meta{:charset => "utf-8"}/
+    %title Portfolio in a box
+    %link{:href => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css", :rel => "stylesheet"}/
+    %link{:href => "css/style.css", :media => "all", :rel => "stylesheet", :type => "text/css"}/
+    :css
+      #content {background: url('../img/bar.jpg');}
+  %body
+    #content.main-section
+      .container
+        .row
+          %main.col-md-6{:role => "main"}
+            #slimpanel
+              %div
+                %a.select_item{"data-item" => "p1"}
+                  %img{:src => "img/food-50.jpg"}/
+              %div
+                %a.select_item{"data-item" => "p2"}
+                  %img{:src => "img/berries-50.jpg"}/
+              %div
+                %a.select_item{"data-item" => "p3"}
+                  %img{:src => "img/sushi-50.jpg"}/
+              #last
+                %a.select_item{"data-item" => "p4"}
+                  %img{:src => "img/sashimi-50.jpg"}/
+            #box{:style => "visibility:visible;"}
+              #projekte-1.content_item{"data-item" => "p1", :style => "display:block"}
+                %h1
+                  Portfolio -
+                  %br/
+                  %b Garten & Landschaftsbau
+                %p
+                  Mit unseren Angeboten an Steinen, Pflastern, Zäunen
+                  und manches macht ist die Gestaltung im
+                  Außenbereich Freude. Unsere Ausstellungen geben
+                  Ihnen die Anregungen.
+                %ul
+                  %li
+                    %b Terrassendielen
+                    = succeed "Roggemann," do
+                      %br/
+                    %img.img-responsive{:src => "img/gl-logos1.png"}/
+                  %li
+                    %b Gartenmöbel
+                    = succeed "Stern," do
+                      %br/
+                  %img.img-responsive{:src => "img/gl-logos2.png"}/
+                  %li
+                    %b Zäune
+                    %br/
+                    Scheerer, Jorkisch, Grooms, Roggemann, Elevato, Osmo
+              #projekte-2.content_item{"data-item" => "p2"}
+                %h1
+                  Portfolio -
+                  %br/
+                  %b Lorem ipsum
+                %p
+                  Lorem ipsum dolor sit amet, sed no iudico deleniti, ignota labore omittantur id usu. Laboramus adolescens appellantur eu qui, postea consetetur vix cu.
+                  Lorem eripuit et mei, sit illud semper minimum ea, eu diam utinam definitionem mei. Tritani recusabo partiendo ne eos. Usu docendi invenire cu.
+              #projekte-3.content_item{"data-item" => "p3"}
+                %h1
+                  Portfolio -
+                  %br/
+                  %b Dolor sit
+                %p
+                  Lorem ipsum dolor sit amet, sed no iudico deleniti, ignota labore omittantur id usu. Laboramus adolescens appellantur eu qui, postea consetetur vix cu.
+                  Lorem eripuit et mei, sit illud semper minimum ea, eu diam utinam definitionem mei. Tritani recusabo partiendo ne eos. Usu docendi invenire cu.
+              #projekte-4.content_item{"data-item" => "p4"}
+                %h1
+                  Portfolio -
+                  %br/
+                  %b Amet
+                %p
+                  Lorem ipsum dolor sit amet, sed no iudico deleniti, ignota labore omittantur id usu. Laboramus adolescens appellantur eu qui, postea consetetur vix cu.
+                  Lorem eripuit et mei, sit illud semper minimum ea, eu diam utinam definitionem mei. Tritani recusabo partiendo ne eos. Usu docendi invenire cu.
+          %aside.col-md-6
+            #column2
+              #plus
+                %img#plusminus{:src => "img/plusminus.png", :style => "left: 0"}/
+    :css
+      .preload-images {
+      background:
+            url('img/food.jpg') no-repeat -9999px -9999px,
+            url('img/berries.jpg') no-repeat -9999px -9999px,
+            url('img/sushi.jpg') no-repeat -9999px -9999px,
+            url('img/sashimi.jpg') no-repeat -9999px -9999px,
+      }
+    .preload-images
+    %script{:src => "js/jquery-1.11.2.min.js", :type => "text/javascript"}
+    %script{:src => "js/portfolio-box-navi.js", :type => "text/javascript"}
+    %script{:src => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"}
