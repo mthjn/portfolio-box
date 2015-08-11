@@ -1,0 +1,79 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+      xmlns:flux="http://typo3.org/ns/flux/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/vhs/ViewHelpers">
+<!-- must be same name as files -->
+<f:layout name="Box" />
+<!-- column definitions -->
+<f:section name="Configuration">
+    <flux:form id="box">
+        <flux:field.input name="settings.pageClass" default="box-css" />
+        <flux:grid>
+            <flux:grid.row>
+                <flux:grid.column colPos="601" name="slimpanel1" />
+                <flux:grid.column colPos="602" name="slimpanel2" />
+                <flux:grid.column colPos="603" name="slimpanel3" />
+
+                <flux:grid.column colPos="501" name="box1" />
+                <flux:grid.column colPos="502" name="box2" />
+                <flux:grid.column colPos="503" name="box3" />
+
+                <flux:grid.column colPos="1" name="side" />
+
+            </flux:grid.row>
+        </flux:grid>
+    </flux:form>
+</f:section>
+
+<f:section name="Main">
+
+ <div class="container">
+  <div class="row">
+
+    <main class="col-md-6" role="main">
+     <f:section name="Content">
+
+      <!--  <v:content.render column="0" /> -->
+        <div id="slimpanel" class="">
+				  <div>
+						<a class="select_item" data-item="p1">
+							<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '601'}"/>
+						</a>
+					</div>
+				  <div>
+						<a class="select_item" data-item="p2">
+							<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '602'}"/>
+						</a>
+					</div>
+				  <div>
+						<a class="select_item" data-item="p3">
+							<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '603'}"/>
+						</a>
+					</div>
+				</div>
+
+				<div id="box-content" style="visibility:visible;">
+				  <div id="projekte-1" class="content_item" data-item="p1">
+						<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '501'}"/>
+						</div>
+				  <div id="projekte-2" class="content_item" data-item="p2">
+					 <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '502'}"/>
+						</div>
+				  <div id="projekte-3" class="content_item" data-item="p3">
+					 <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '503'}"/>
+				  	</div>
+				</div>
+
+
+    </f:section>
+   </main>
+   <div class="col-md-6">
+    <f:section name="Sidebar">
+        <v:content.render column="1" />
+    </f:section>
+   </div>
+  </f:section>
+
+  </div>
+ </div>
+</div>
