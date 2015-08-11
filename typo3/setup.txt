@@ -1,0 +1,34 @@
+page = PAGE
+page {
+	typeNum = 0
+
+	10 = FLUIDTEMPLATE
+
+	10 {
+		file.stdWrap.cObject = CASE
+		file.stdWrap.cObject {
+    
+			key.data = levelfield:-1, backend_layout_next_level, slide
+			key.override.field = backend_layout
+
+			default = TEXT
+			default.value = fileadmin/templates/Box.html
+			default.insertData = 1
+
+		}
+
+		layoutRootPath = fileadmin/layouts
+
+    includeCSS {
+
+  	}
+
+  	includeJSlibs {
+
+  	}
+
+  	includeJSFooterlibs {
+
+  	}
+
+}
