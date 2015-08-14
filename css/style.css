@@ -15,7 +15,7 @@ body {
 #content {
     width:100%;
     min-height: 900px;
-    background-size: cover;
+    background-size: cover !important;
     background-repeat: no-repeat;
     position: relative;
 }
